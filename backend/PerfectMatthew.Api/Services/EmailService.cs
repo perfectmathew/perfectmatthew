@@ -24,32 +24,7 @@ namespace PerfectMatthew.Api.Services
                 name, email, subject, message);
 
             // TODO: Implement actual email sending using SMTP or email service provider
-            // For now, we're just logging the message
-            
-            // Example implementation with SMTP would look like this:
-            /*
-            var smtpClient = new SmtpClient(_configuration["Email:SmtpServer"])
-            {
-                Port = int.Parse(_configuration["Email:SmtpPort"]),
-                Credentials = new NetworkCredential(
-                    _configuration["Email:Username"],
-                    _configuration["Email:Password"]
-                ),
-                EnableSsl = true,
-            };
 
-            var mailMessage = new MailMessage
-            {
-                From = new MailAddress(_configuration["Email:FromAddress"]),
-                Subject = $"Portfolio Contact: {subject}",
-                Body = $"Name: {name}\nEmail: {email}\n\nMessage:\n{message}",
-                IsBodyHtml = false,
-            };
-            
-            mailMessage.To.Add(_configuration["Email:ToAddress"]);
-
-            await smtpClient.SendMailAsync(mailMessage);
-            */
 
             await Task.CompletedTask;
         }
