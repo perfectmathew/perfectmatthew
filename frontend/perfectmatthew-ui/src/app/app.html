@@ -1,0 +1,68 @@
+<app-header></app-header>
+<main class="min-h-screen">
+  <app-hero></app-hero>
+  
+  @defer (on viewport) {
+    <app-about-me></app-about-me>
+  } @placeholder {
+    <div class="h-96 flex items-center justify-center bg-gray-50">
+      <div class="animate-pulse text-gray-400">Loading about section...</div>
+    </div>
+  } @loading (minimum 100ms) {
+    <div class="h-96 flex items-center justify-center bg-gray-50">
+      <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-blue-600"></div>
+    </div>
+  } @error {
+    <div class="h-96 flex items-center justify-center bg-gray-50">
+      <div class="text-red-500">Failed to load about section</div>
+    </div>
+  }
+  
+  @defer (on viewport) {
+    <app-skills></app-skills>
+  } @placeholder {
+    <div class="h-96 flex items-center justify-center bg-white">
+      <div class="animate-pulse text-gray-400">Loading skills...</div>
+    </div>
+  } @loading (minimum 100ms) {
+    <div class="h-96 flex items-center justify-center bg-white">
+      <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-blue-600"></div>
+    </div>
+  } @error {
+    <div class="h-96 flex items-center justify-center bg-white">
+      <div class="text-red-500">Failed to load skills</div>
+    </div>
+  }
+  
+  @defer (on viewport) {
+    <app-projects></app-projects>
+  } @placeholder {
+    <div class="h-96 flex items-center justify-center bg-gray-50">
+      <div class="animate-pulse text-gray-400">Loading projects...</div>
+    </div>
+  } @loading (minimum 100ms) {
+    <div class="h-96 flex items-center justify-center bg-gray-50">
+      <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-blue-600"></div>
+    </div>
+  } @error {
+    <div class="h-96 flex items-center justify-center bg-gray-50">
+      <div class="text-red-500">Failed to load projects</div>
+    </div>
+  }
+  
+  @defer (on viewport) {
+    <app-contact></app-contact>
+  } @placeholder {
+    <div class="h-96 flex items-center justify-center bg-white">
+      <div class="animate-pulse text-gray-400">Loading contact form...</div>
+    </div>
+  } @loading (minimum 100ms) {
+    <div class="h-96 flex items-center justify-center bg-white">
+      <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-blue-600"></div>
+    </div>
+  } @error {
+    <div class="h-96 flex items-center justify-center bg-white">
+      <div class="text-red-500">Failed to load contact form</div>
+    </div>
+  }
+</main>
